@@ -1,0 +1,71 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Grid layout for page */
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 2fr 1fr;
+    /* main wider, aside narrower */
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+/* Navigation inside header */
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #111;
+    margin-top: 1rem;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #444;
+}
+
+/* Main content */
+main {
+    grid-area: main;
+    padding: 1rem;
+    background: #eaeaea;
+}
+
+/* Aside content */
+aside {
+    grid-area: aside;
+    padding: 1rem;
+    background: #f5f5f5;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
