@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 – Dynamic Web Fundamentals – Brinley Francis</title>
+  <meta name="description"
+    content="WDD 131 – Dynamic Web Fundamentals. Brinley Francis from Nigeria. Personal landing page with about me, Nigerian culture, and web development resources." />
+  <meta name="author" content="Brinley Francis" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/base.css" />
+
+  <script src="scripts/getdates.js" defer></script>
 </head>
+
 <body>
-  <h1>WDD 131 - Brinley</h1>
+  <header>
+    <h1>WDD 131: Dynamic Web Fundamentals - <span id="author-name">Brinley Francis</span></h1>
+  </header>
+  <nav>
+    <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+    <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+    <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+    <a href="#">Final Project</a>
+  </nav>
+
+  <main>
+    <section class="card">
+      <h2>About Me</h2>
+      <div class="card-content">
+        <div class="text-container">
+          <p>
+            Hi, I’m Brinley from Nigeria 🇳🇬. I’m passionate about creativity, technology, and helping others
+            transition into the digital world. I love connecting with people, storytelling, and learning
+            new skills that open doors to opportunities. My roots in Nigeria inspire me to stay resilient,
+            resourceful, and community-focused. Outside coding, I enjoy writing, exploring culture, and
+            celebrating the diversity of my country.
+          </p>
+        </div>
+        <img src="images/Brinley-id .jpg" alt="Photo of Brinley Francis" />
+      </div>
+
+      <h3>Nigeria, My Home</h3>
+      <div class="card-content">
+        <img src="images/nigerian-flag.jpg" alt="Official Flag of Nigeria" class="flag" />
+        <div class="text-container">
+          <p>
+            Nigeria is known as the “Giant of Africa” — a country full of energy, culture, and diversity.
+            With over 250 ethnic groups, it is home to vibrant traditions, music, Nollywood films, and
+            delicious foods like <em>jollof rice</em> and <em>suya</em>. Nigerians are known for their
+            resilience, creativity, and warm hospitality. I am proud to represent this beautiful country
+            where innovation and culture walk hand in hand.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to" target="_blank">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+        <li><a href="https://placeholder.com/" target="_blank">Image Placeholder</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      &copy; <span id="currentyear"></span> 🌸 Brinley Francis 🌸 Nigeria
+    </p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
+
 </html>
