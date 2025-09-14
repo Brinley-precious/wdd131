@@ -76,7 +76,7 @@ body {
 .menu-toggle::before {
     content: "☰";
     display: inline-block;
-    line-height: 48px;
+    line-height: 1;
 }
 
 .menu-toggle.open::before {
