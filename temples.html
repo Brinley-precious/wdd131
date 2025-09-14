@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temple Album – Brinley Francis</title>
+    <meta name="description" content="Temple Album – responsive gallery of temple images. Brinley Francis – WDD131.">
+    <meta name="author" content="Brinley Francis">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS (mobile-first then larger overrides) -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <!-- JS (deferred) -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <h1 class="site-title">Temple Album</h1>
+
+            <!-- Hamburger button (mobile) -->
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav"
+                aria-label="Open navigation">
+            </button>
+
+            <!-- Primary nav is inside header-inner so title/nav share one row on large -->
+            <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Old</a></li>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Large</a></li>
+                    <li><a href="#">Small</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2 class="page-heading">Home</h2>
+
+        <section class="gallery" aria-label="Temple gallery">
+            <!-- 9 figures (replace images in /images/, keep filenames) -->
+            <figure>
+                <img src="images/temple1.jpg" alt="San Diego California Temple" loading="lazy" width="800" height="533">
+                <figcaption>San Diego, California</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple2.jpg" alt="Rome Italy Temple" loading="lazy" width="800" height="533">
+                <figcaption>Rome, Italy</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple3.jpg" alt="Tokyo Japan Temple" loading="lazy" width="800" height="533">
+                <figcaption>Tokyo, Japan</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple4.jpg" alt="Accra Ghana Temple" loading="lazy" width="800" height="533">
+                <figcaption>Accra, Ghana</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple5.jpg" alt="Lagos Nigeria Temple" loading="lazy" width="800" height="533">
+                <figcaption>Lagos, Nigeria</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple6.jpg" alt="Paris France Temple" loading="lazy" width="800" height="533">
+                <figcaption>Paris, France</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple7.jpg" alt="Salt Lake City Temple" loading="lazy" width="800" height="533">
+                <figcaption>Salt Lake City, USA</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple8.jpg" alt="Nassau Bahamas Temple" loading="lazy" width="800" height="533">
+                <figcaption>Nassau, Bahamas</figcaption>
+            </figure>
+            <figure>
+                <img src="images/temple9.jpg" alt="Sydney Australia Temple" loading="lazy" width="800" height="533">
+                <figcaption>Sydney, Australia</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="currentyear"></span> 🌸 <strong>Brinley Francis</strong> 🌸 Nigeria</p>
+        <p id="lastModified" aria-live="polite"></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+/* temples-large.css — overrides for larger screens (mobile-first) */
+@media screen and (min-width: 56.25em) {
+
+    /* 900px */
+    .header-inner {
+        padding: 1rem;
+    }
+
+    .site-title {
+        font-size: 1.6rem;
+    }
+
+    /* hide hamburger on large screens */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* show nav horizontally and push right */
+    .nav-list {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        margin-left: auto;
+        /* push to far-right */
+    }
+
+    .primary-nav {
+        padding: 0;
+    }
+
+    .nav-list a {
+        padding: 0.5rem 0.9rem;
+        background: transparent;
+        border-radius: 6px;
+        color: var(--text-on-dark);
+    }
+
+    .nav-list a:hover {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* Gallery -> 3 columns */
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    figure {
+        padding: 0.75rem;
+    }
+
+    /* Footer */
+    .site-footer {
+        padding: 1rem;
+    }
+}
