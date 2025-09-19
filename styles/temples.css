@@ -65,9 +65,10 @@ body {
 .menu-toggle {
     width: 48px;
     height: 48px;
-    background: transparent;
+    background: var(--secondary);
     border: 0;
-    color: var(--text-on-dark);
+    border-radius: 6px;
+    color: var(--text);
     font-size: 1.4rem;
     cursor: pointer;
     /* keep button after title and before nav so keyboard order is logical */
@@ -111,7 +112,9 @@ body {
 
 .nav-list a:hover,
 .nav-list a:focus {
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--secondary);
+    color: var(--text);
+    text-decoration: none;
     outline: none;
 }
 
@@ -188,10 +191,4 @@ a:focus,
 button:focus {
     outline: 3px solid var(--secondary);
     outline-offset: 2px;
-}
-a:hover,
-button:hover {
-    outline: none;
-    background: var(--hover);
-    color: white;
 }
