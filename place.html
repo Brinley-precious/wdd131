@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A web page about South Korea, featuring its key data, weather information, and cultural imagery.">
+    <meta name="author" content="Your Name Here">
+    <title>South Korea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-band"></div>
+        <h1>South Korea</h1>
+    </header>
+
+    <main>
+        <div class="hero-container">
+            <picture>
+                <source srcset="images/seoul-large.webp" media="(min-width: 768px)">
+                <img srcset="images/seoul-small.webp" alt="A beautiful palace in South Korea" loading="lazy">
+            </picture>
+
+            <section class="data-section">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 100,363 sq km</li>
+                    <li><strong>Population:</strong> 51,785,162</li>
+                    <li><strong>Capital:</strong> Seoul</li>
+                    <li><strong>Languages:</strong> Korean</li>
+                    <li><strong>Currency:</strong> South Korean Won</li>
+                    <li><strong>Time Zone:</strong> UTC+9</li>
+                    <li><strong>Calling Code:</strong> +82</li>
+                    <li><strong>Internet TLD:</strong> .kr</li>
+                </ul>
+            </section>
+
+            <section class="weather-section">
+                <h2 class="weather-heading">Weather</h2>
+                <div class="weather-info">
+                    <span class="weather.icon-mobile"></span>
+                    <p><strong>Temperature:</strong> <span id="temp">5</span>°C</p>
+                    <p><strong>Conditions:</strong> Sunny</p>
+                    <p><strong>Wind:</strong> <span id="wind-speed">3</span> km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="wind-chill"></span></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌸 Brinley Francis 🌸 South Korea</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #CD2E3A;
+    /* Red from the flag */
+    --secondary-color: #0047A0;
+    /* Blue from the flag */
+    --text-color: #333;
+    --background-color: #F0F0F0;
+    --box-bg-color: rgba(255, 255, 255, 0.85);
+    /* Slightly transparent white for the boxes */
+}
+
+/* Base styles for mobile view */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Header and Footer */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 1rem;
+    position: relative;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Header Two-Color Band for Desktop */
+.header-band {
+    display: none;
+    /* Hidden on mobile */
+}
+
+/* Main Content Container (Mobile View) */
+main {
+    padding: 1rem;
+    /* Padding for mobile view to space out content */
+}
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    /* Removed max-width here! This was causing the hero image to shrink. */
+    margin: 0 auto;
+}
+
+.hero-container picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Data & Weather sections (Mobile View) */
+.data-section,
+.weather-section {
+    padding: 1rem;
+    background-color: var(--box-bg-color);
+    margin-bottom: 1rem;
+}
+
+.data-section h2,
+.weather-section h2 {
+    color: white;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.data-section h2 {
+    background-color: var(--secondary-color);
+}
+
+.weather-section h2 {
+    background-color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.weather-icon-mobile {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/weather.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Media query for wider screens (desktop) */
+@media screen and (min-width: 768px) {
+
+    /* Reset main padding for desktop layout */
+    main {
+        padding: 0;
+    }
+
+    .weather-icon-mobile {
+        display: none;
+        /* Hide on desktop */
+    }
+
+    /* Header Two-Color Band */
+    header {
+        position: relative;
+        padding-top: 2rem;
+    }
+
+    .header-band {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1rem;
+        background-color: var(--secondary-color);
+    }
+
+    /* Data and Weather boxes are positioned absolutely over the full-width image */
+    .data-section,
+    .weather-section {
+        position: absolute;
+        z-index: 10;
+        margin: 0;
+        padding: 1rem;
+        width: 300px;
+        /* Fixed width as shown in sample */
+    }
+
+    .data-section {
+        top: 2rem;
+        left: 2rem;
+    }
+
+    .weather-section {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    /* Pseudo-element for the weather emoticon (wider view only) */
+    .weather-heading::before {
+        content: '⛅';
+        font-size: 1.25rem;
+        margin-right: 0.5rem;
+    }
+}
