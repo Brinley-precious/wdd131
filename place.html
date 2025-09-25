@@ -25,7 +25,9 @@
         <div class="hero-container">
             <picture>
                 <source srcset="images/seoul-large.webp" media="(min-width: 768px)">
-                <img srcset="images/seoul-small.webp" alt="A beautiful palace in South Korea" loading="lazy">
+                <img src="images/seoul-small.webp" srcset="images/hero-small.webp" alt="A beautiful palace in South Korea"
+                    loading="lazy">
+                </picture>
             </picture>
 
             <section class="data-section">
@@ -43,7 +45,7 @@
             </section>
 
             <section class="weather-section">
-                <h2 class="weather-heading">Weather</h2>
+                <h2 id="weather-heading" class="weather-heading">Weather</h2>
                 <div class="weather-info">
                     <span class="weather.icon-mobile"></span>
                     <p><strong>Temperature:</strong> <span id="temp">5</span>°C</p>
