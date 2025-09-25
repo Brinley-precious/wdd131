@@ -164,7 +164,7 @@ li {
     }
 
     /* Pseudo-element for the weather emoticon (wider view only) */
-    .weather-heading::before {
+    .weather-heading::after {
         content: '⛅';
         font-size: 1.25rem;
         margin-left: 0.5rem;
