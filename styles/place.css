@@ -103,11 +103,11 @@ li {
 }
 
 .weather-icon-mobile {
-    display: block;
+    display: block !important;
     margin: 0.5rem auto;
     width: 60px;
     height: 60px;
-    background-image: url ('../images/weather.svg');
+    background-image: url('../images/weather.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
