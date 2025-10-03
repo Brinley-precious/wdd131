@@ -1,0 +1,141 @@
+/* Mobile-first styles for lazyload page */
+:root {
+    --max-width: 740px;
+    --page-bg: #fafafa;
+    --text: #111827;
+    --muted: #6b7280;
+    --accent: #0ea5a4;
+    /* teal-ish */
+    --overlay: rgba(0, 0, 0, 0.78);
+    --radius: 10px;
+    --gap: 1rem;
+    --transition: 700ms ease;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: system-ui, "Segoe UI", Roboto, "Lora", serif;
+    background: var(--page-bg);
+    color: var(--text);
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 1.25rem auto;
+    padding: 0 1rem;
+}
+
+/* heading/intro */
+h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+
+.intro {
+    margin: 0 0 1rem 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Gallery: single column centered (always) */
+.gallery {
+    display: block;
+    margin: 0 auto;
+}
+
+/* wrapper holds image + overlay */
+.img-wrapper {
+    width: 400px;
+    /* target width */
+    max-width: 90vw;
+    /* responsive on phone */
+    margin: 0 auto var(--gap) auto;
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    /* clip overlay and image corners */
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* image */
+.img-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    /* start invisible */
+    transform: translateY(6px);
+    transition: opacity var(--transition), transform var(--transition);
+    will-change: opacity, transform;
+}
+
+/* caption */
+figure figcaption {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    color: var(--muted);
+    text-align: center;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.02));
+}
+
+/* overlay (dark cover) - fades out when wrapper gets .loaded */
+.img-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--overlay);
+    opacity: 1;
+    transition: opacity var(--transition);
+    pointer-events: none;
+}
+
+/* when image loads, JS adds .loaded to wrapper */
+.img-wrapper.loaded img {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img-wrapper.loaded::before {
+    opacity: 0;
+}
+
+/* subtle focus for keyboard users */
+a:focus,
+button:focus,
+img:focus {
+    outline: 3px solid rgba(14, 165, 164, 0.18);
+    outline-offset: 3px;
+}
+
+/* Footer */
+.site-footer {
+    max-width: var(--max-width);
+    margin: 1.5rem auto;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.95rem;
+    background: transparent;
+}
+
+/* Desktop: nothing necessary, but keep layout centered */
+@media (min-width: 48rem) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .img-wrapper {
+        margin-bottom: 1.5rem;
+    }
+}

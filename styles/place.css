@@ -103,7 +103,7 @@ li {
 }
 
 .weather-icon-mobile {
-    display: block !important;
+    display: block;
     margin: 0.5rem auto;
     width: 60px;
     height: 60px;
