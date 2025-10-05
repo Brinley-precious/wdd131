@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Review Submitted – Product Review</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Review Submitted</h1>
+    </header>
+
+    <main class="container">
+        <section class="panel" id="confirmation">
+            <!-- Content populated by review.js -->
+            <h2>Thank you!</h2>
+            <div id="submittedData"></div>
+            <p id="countText" style="margin-top:1rem; font-weight:700;"></p>
+        </section>
+        <section class="panel">
+            <a href="form.html" class="btn-primary" style="display:inline-block;text-decoration:none">Submit Another</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="currentyear"></span> 🌸 <strong>Brinley Francis</strong> 🌸 Nigeria</p>
+        <p id="lastModified" aria-live="polite"></p>
+    </footer>
+
+    <script>
+        // small fallback for year & lastModified (review.js will update too)
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = 'Last Modification: ' + document.lastModified;
+    </script>
+</body>
+
+</html>

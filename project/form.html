@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Product Review – Brinley Francis</title>
+    <meta name="description" content="Product review form example – WDD131" />
+    <meta name="author" content="Brinley Francis" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/form.css">
+
+    <!-- JS -->
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Product Review</h1>
+    </header>
+
+    <main class="container">
+        <form id="reviewForm" method="get" action="review.html" novalidate>
+            <!-- Product Name -->
+            <fieldset class="panel">
+                <legend>Product Name</legend>
+                <label for="productSelect" class="sr-only">Select product</label>
+                <select id="productSelect" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                    <!-- options inserted by scripts/form.js -->
+                </select>
+            </fieldset>
+
+            <!-- Overall Rating -->
+            <fieldset class="panel">
+                <legend>Overall Rating</legend>
+                <div class="rating-row" role="radiogroup" aria-label="Overall rating">
+                    <!-- 5 radios: value 1..5 -->
+                    <label class="star">
+                        <input type="radio" name="rating" value="1" required>
+                        <span aria-hidden="true">☆</span>
+                        <span class="sr-only">1 star</span>
+                    </label>
+                    <label class="star">
+                        <input type="radio" name="rating" value="2">
+                        <span aria-hidden="true">☆☆</span>
+                        <span class="sr-only">2 stars</span>
+                    </label>
+                    <label class="star">
+                        <input type="radio" name="rating" value="3">
+                        <span aria-hidden="true">☆☆☆</span>
+                        <span class="sr-only">3 stars</span>
+                    </label>
+                    <label class="star">
+                        <input type="radio" name="rating" value="4">
+                        <span aria-hidden="true">☆☆☆☆</span>
+                        <span class="sr-only">4 stars</span>
+                    </label>
+                    <label class="star">
+                        <input type="radio" name="rating" value="5">
+                        <span aria-hidden="true">☆☆☆☆☆</span>
+                        <span class="sr-only">5 stars</span>
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <fieldset class="panel">
+                <legend>Date of Installation</legend>
+                <label for="installedDate" class="sr-only">Installation date</label>
+                <input type="date" id="installedDate" name="installed" required>
+            </fieldset>
+
+            <!-- Useful Features (checkboxes) -->
+            <fieldset class="panel">
+                <legend>Which features did you find useful? <small>(Check all that apply)</small></legend>
+                <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+                <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+                <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+                <label><input type="checkbox" name="features" value="Design"> Design</label>
+            </fieldset>
+
+            <!-- Written Review -->
+            <fieldset class="panel">
+                <legend>Written Review <small>(Optional)</small></legend>
+                <label for="reviewText" class="sr-only">Written review</label>
+                <textarea id="reviewText" name="review" rows="6" placeholder="Write your review (optional)"></textarea>
+            </fieldset>
+
+            <!-- Your Name (optional) -->
+            <fieldset class="panel">
+                <legend>Your Name <small>(Optional)</small></legend>
+                <label for="reviewerName" class="sr-only">Your name</label>
+                <input type="text" id="reviewerName" name="name" placeholder="Your name (optional)">
+            </fieldset>
+
+            <!-- Submit -->
+            <div class="actions">
+                <input type="submit" value="Post Review" class="btn-primary">
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="currentyear"></span> 🌸 <strong>Brinley Francis</strong> 🌸 Nigeria</p>
+        <p id="lastModified" aria-live="polite"></p>
+    </footer>
+
+    <script>
+        // Footer dynamic year & last modified — small inline safety (also review.js will set on review page)
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = 'Last Modification: ' + document.lastModified;
+    </script>
+</body>
+
+</html>

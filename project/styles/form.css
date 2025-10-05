@@ -1,0 +1,198 @@
+:root {
+    --sage: #8AA29E;
+    --cream: #F7F4EA;
+    --warm: #9B7E6A;
+    --text: #2E2B2B;
+    --muted: #7B7B78;
+    --radius: 10px;
+    --max-width: 880px;
+    --gap: 1rem;
+}
+
+/* Reset + base */
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0
+}
+
+body {
+    font-family: "Roboto", Roboto, Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* header */
+.site-header {
+    background: var(--warm);
+    color: #fff;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700
+}
+
+/* container */
+.container {
+    max-width: var(--max-width);
+    margin: 1.25rem auto;
+    padding: 0 1rem;
+}
+
+/* panels (fieldset) */
+.panel {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 0.9rem;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: var(--gap);
+}
+
+.panel legend {
+    font-weight: 700;
+    color: var(--warm);
+    padding: 0 0.25rem;
+}
+
+/* select, input, textarea */
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #fff;
+    font-size: 1rem;
+    color: var(--text);
+}
+
+textarea {
+    resize: vertical
+}
+
+/* rating row */
+.rating-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.star {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.45rem 0.6rem;
+    border-radius: 8px;
+    transition: background .15s ease;
+}
+
+.star input {
+    display: none
+}
+
+.star span[aria-hidden="true"] {
+    font-size: 1.05rem;
+    color: var(--muted);
+}
+
+.star:hover {
+    background: rgba(0, 0, 0, 0.03)
+}
+
+.star input:checked+span[aria-hidden="true"] {
+    color: var(--warm);
+    font-weight: 700;
+}
+
+/* checkboxes layout */
+.panel label {
+    display: block;
+    margin: 0.45rem 0;
+    cursor: pointer;
+    font-size: 0.98rem
+}
+
+/* actions / submit */
+.actions {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 2rem;
+}
+
+.btn-primary {
+    background: var(--sage);
+    color: #fff;
+    padding: 0.9rem 1.2rem;
+    border: 0;
+    border-radius: 10px;
+    font-size: 1.15rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.btn-primary:hover {
+    background: #7a988d
+}
+
+/* footer */
+.site-footer {
+    background: var(--warm);
+    color: white;
+    text-align: center;
+    padding: 1.1rem;
+    margin-top: 2rem;
+}
+
+.site-footer strong {
+    font-weight: 700
+}
+
+/* small helpers */
+.sr-only {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+}
+
+/* Responsiveness */
+@media (min-width: 700px) {
+    .container form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem
+    }
+
+    .panel {
+        margin: 0
+    }
+
+    /* make the submit full width below the two-column panels */
+    .actions {
+        grid-column: 1/-1
+    }
+
+    /* rating row spans one column setup for better layout */
+    .rating-row {
+        gap: 0.75rem
+    }
+}
