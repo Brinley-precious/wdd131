@@ -1,9 +1,9 @@
 :root {
-    --sage: #8AA29E;
-    --cream: #F7F4EA;
-    --warm: #9B7E6A;
-    --text: #2E2B2B;
-    --muted: #7B7B78;
+    --sage: #6b7b6b;
+    --warm: #8a6953;
+    --text: #222222;
+    --muted: #555555;
+    --cream: #f9f4ef;
     --radius: 10px;
     --max-width: 880px;
     --gap: 1rem;
@@ -23,7 +23,6 @@ body {
 body {
     font-family: "Roboto", Roboto, Arial, sans-serif;
     background: var(--cream);
-    color: var(--text);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -134,7 +133,7 @@ textarea {
 }
 
 .btn-primary {
-    background: var(--sage);
+    background: #556b55;
     color: #fff;
     padding: 0.9rem 1.2rem;
     border: 0;
@@ -145,7 +144,7 @@ textarea {
 }
 
 .btn-primary:hover {
-    background: #7a988d
+    background: var(--sage);
 }
 
 /* footer */
