@@ -26,10 +26,10 @@
     </header>
 
     <main class="container">
-        <form id="reviewForm" method="get" action="review.html" novalidate>
+        <form id="reviewForm" method="get" action="review.html">
             <!-- Product Name -->
             <fieldset class="panel">
-                <legend>Product Name</legend>
+                <legend>Product Name <span class="required">*</span></legend>
                 <label for="productSelect" class="sr-only">Select product</label>
                 <select id="productSelect" name="product" required>
                     <option value="" disabled selected>Select a Product ...</option>
@@ -39,7 +39,7 @@
 
             <!-- Overall Rating -->
             <fieldset class="panel">
-                <legend>Overall Rating</legend>
+                <legend>Overall Rating <span class="required">*</span></legend>
                 <div class="rating-row" role="radiogroup" aria-label="Overall rating">
                     <!-- 5 radios: value 1..5 -->
                     <label class="star">
@@ -72,7 +72,7 @@
 
             <!-- Date of Installation -->
             <fieldset class="panel">
-                <legend>Date of Installation</legend>
+                <legend>Date of Installation <span class="required">*</span></legend>
                 <label for="installedDate" class="sr-only">Installation date</label>
                 <input type="date" id="installedDate" name="installed" required>
             </fieldset>

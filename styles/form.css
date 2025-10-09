@@ -181,6 +181,12 @@ textarea {
         gap: 1rem
     }
 
+.required {
+    color: #b22222;
+    /* dark red for clear visibility */
+    font-weight: bold;
+}
+
     .panel {
         margin: 0
     }
