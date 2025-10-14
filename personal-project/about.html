@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>About Me | Brinley Francis</title>
+    <meta name="description"
+        content="Learn about Brinley Francis's background, skills in web development, content creation, customer support, and her Nigerian roots.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Home"><span class="logo-mark">BF</span><span
+                    class="logo-text">Brinley Francis</span></a>
+            <button id="menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open navigation">☰</button>
+            <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-nav="home">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-nav="about">About</a></li>
+                    <li><a href="projects.html" class="nav-link" data-nav="projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main" id="main">
+        <section class="section-padding">
+            <div class="container">
+                <h1 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">My Mission & Approach</h1>
+
+                <div class="about-grid">
+
+                    <section class="about-box">
+                        <h2>Who I Am: Digital Storyteller & Problem Solver</h2>
+                        <div class="bio-content">
+                            <div class="bio-text">
+                                <p>My name is **Brinley Francis**, and I thrive at the intersection of technology and
+                                    communication. I'm driven by a passion to help organizations and individuals
+                                    transition smoothly into the digital landscape by building reliable platforms and
+                                    crafting crystal-clear content.</p>
+
+                                <section class="sub-section">
+                                    <h3>My Core Philosophy</h3>
+                                    <p>I believe in a digital world where **elegance meets functionality**. Every line
+                                        of code, every sentence, and every customer interaction must serve a purpose. My
+                                        work is built on the pillars of **resilience, resourcefulness, and community**,
+                                        values deeply rooted in my Nigerian heritage.</p>
+                                </section>
+
+                                <section class="sub-section">
+                                    <h3>A Note on Nigeria</h3>
+                                    <p>I am proudly from Nigeria, the "Giant of Africa." My background gives me a unique
+                                        perspective on adaptability and robust problem-solving, which I bring to every
+                                        project, whether it's debugging JavaScript or simplifying complex documentation.
+                                    </p>
+                                </section>
+                            </div>
+
+                            <figure class="portrait">
+                                <img src="images/brinley-id.webp" alt="Professional headshot of Brinley Francis"
+                                    width="800" height="800" loading="lazy">
+                                <figcaption>Brinley at work</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <aside class="about-box">
+                        <h2>Core Skills</h2>
+                        <ul class="skills-list">
+                            <li>**Web Development:** HTML5, Modern CSS (Grid/Flexbox), Vanilla JavaScript.</li>
+                            <li>**Content Strategy:** Technical Writing, SEO Optimization, Editing, Long-Form Content.
+                            </li>
+                            <li>**Customer Support:** Documentation, Knowledgebase Structure, Workflow Automation,
+                                Service Design.</li>
+                            <li>**Tools:** VS Code, Git/GitHub, Figma, Google Analytics, Zendesk/Intercom.</li>
+                        </ul>
+
+                        <div style="margin-top: 2rem;">
+                            <a href="projects.html" class="button secondary">See Skills in Action</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="contact-form-section">
+            <div class="container">
+                <h2>Want to collaborate? Let's connect.</h2>
+                <p>I'm open to freelance work, remote opportunities, or just a conversation about the future of the web.
+                </p>
+
+                <form id="contact-form" method="get" action="thanks.html">
+            
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message/Inquiry:</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                
+                        <button type="submit" class="button primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="currentyear"></span> <strong>Brinley Francis</strong>. All rights reserved.</p>
+            <p>Last modification: <time id="lastModified" datetime=""></time></p>
+            <p><a href="references.html">References & Sources</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

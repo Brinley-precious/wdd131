@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Brinley Francis | Dynamic Web Portfolio</title>
+    <meta name="description"
+        content="Brinley Francis: A professional portfolio showcasing expertise in responsive web development, SEO content writing, and customer support documentation.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Home"><span class="logo-mark">BF</span><span
+                    class="logo-text">Brinley Francis</span></a>
+            <button id="menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open navigation">☰</button>
+            <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-nav="home">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-nav="about">About</a></li>
+                    <li><a href="projects.html" class="nav-link" data-nav="projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main" id="main">
+        <section class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width:1000px)">
+                <img src="images/hero-small.webp" alt="Clean workspace desk with laptop and notebook" width="1500"
+                    height="1000" loading="eager">
+            </picture>
+            <div class="container hero-content">
+                <h1>Hi, I'm Brinley. A Digital Growth Catalyst.</h1>
+                <p>I build elegant, responsive web experiences, craft high-impact SEO content, and optimize systems for
+                    seamless customer success.</p>
+                <a href="projects.html" class="button primary">Explore My Work</a>
+            </div>
+        </section>
+
+        <section class="featured-projects section-padding">
+            <div class="container">
+                <h2>Featured Digital Projects</h2>
+                <p>A selection of recent work across my core skill areas: Web Development, Content Strategy, and
+                    Customer Support.</p>
+                <div id="featured-projects-grid" class="project-card-grid">
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="projects.html" class="button secondary">View All Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding">
+            <div class="container" style="text-align: center;">
+                <h2>Ready to Start a Conversation?</h2>
+                <p style="max-width: 600px; margin: 1rem auto 2rem;">Whether you need a dynamic website, compelling
+                    copy, or better customer workflows, I'm ready to collaborate.</p>
+                <a href="about.html#contact-form" class="button primary">Contact Brinley</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="currentyear"></span> <strong>Brinley Francis</strong>. All rights reserved.</p>
+            <p>Last modification: <time id="lastModified" datetime=""></time></p>
+            <p><a href="references.html">References & Sources</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

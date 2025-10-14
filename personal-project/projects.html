@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Projects & Work Showcase | Brinley Francis</title>
+    <meta name="description"
+        content="A dynamic showcase of Brinley Francis's web development, technical writing, and customer support projects, featuring interactive filtering.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html" aria-label="Home"><span class="logo-mark">BF</span><span
+                    class="logo-text">Brinley Francis</span></a>
+            <button id="menu-toggle" class="menu-toggle" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open navigation">☰</button>
+            <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-nav="home">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-nav="about">About</a></li>
+                    <li><a href="projects.html" class="nav-link" data-nav="projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main" id="main">
+        <section class="section-padding">
+            <div class="container">
+                <h1 style="text-align: center; margin-bottom: 0.5rem; font-size: 2.5rem;">My Project Showcase</h1>
+                <p style="text-align: center; margin-bottom: 2rem;">Filter by expertise to see relevant work examples.
+                </p>
+
+                <p id="visit-count"
+                    style="text-align: center; font-style: italic; color: var(--muted); margin-bottom: 1rem;">
+                </p>
+
+                <div class="project-filter">
+                    <button class="button filter-button" data-filter="all">All Work</button>
+                    <button class="button filter-button" data-filter="web">Web Development</button>
+                    <button class="button filter-button" data-filter="writing">Content Writing</button>
+                    <button class="button filter-button" data-filter="support">Customer Support</button>
+                </div>
+
+                <div id="all-projects-grid" class="project-card-grid">
+                </div>
+            </div>
+        </section>
+
+        <div id="project-modal" class="project-modal">
+            <div id="modal-content-body" class="modal-content">
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="currentyear"></span> <strong>Brinley Francis</strong>. All rights reserved.</p>
+            <p>Last modification: <time id="lastModified" datetime=""></time></p>
+            <p><a href="references.html">References & Sources</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
