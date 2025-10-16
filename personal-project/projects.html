@@ -13,7 +13,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preload" href="styles/styles.css" as="style">
+    <link rel="stylesheet" href="styles/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="styles/styles.css"></noscript>
     <script src="scripts/main.js" defer></script>
 </head>
 
@@ -38,8 +40,8 @@
         <section class="section-padding">
             <div class="container">
                 <h1 style="text-align: center; margin-bottom: 0.5rem; font-size: 2.5rem;">My Project Showcase</h1>
-                <p style="text-align: center; margin-bottom: 2rem;">Filter by expertise to see relevant work examples.
-                </p>
+                <p style="text-align: center; margin-bottom: 2rem;">See how I turn complexity into clarity. Filter the projects below by Web Development, Writing, or Support.</p>
+                <!-- Visit counter display -->
 
                 <p id="visit-count"
                     style="text-align: center; font-style: italic; color: var(--muted); margin-bottom: 1rem;">

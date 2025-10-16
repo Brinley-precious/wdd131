@@ -166,9 +166,17 @@ function incrementProjectsVisit() {
     localStorage.setItem(key, visits);
 
     const countEl = document.getElementById('visit-count');
+
     // Conditional Branching & DOM Interaction (Selecting and Modifying)
     if (countEl) {
-        countEl.textContent = `You've viewed projects ${visits} times!`;
+        // Determine correct word based on count
+        let timeWord = 'times';
+        if (visits === 1) {
+            timeWord = 'time'; // Change to singular if count is exactly 1
+        }
+
+        // Use the correct word in the message
+        countEl.textContent = `You've viewed projects ${visits} ${timeWord}!`;
     }
 }
 
