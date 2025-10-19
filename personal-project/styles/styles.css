@@ -66,7 +66,8 @@ a:hover {
 }
 
 main {
-    margin-bottom: 7rem;
+    margin-top: 4.5rem;
+    /* Space for fixed header */
 }
 
 .button {
@@ -192,6 +193,14 @@ main {
     padding: 6.5rem 1rem;
     text-align: center;
     overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .hero {
+        /* This overrides the 6.5rem padding-top above. 
+           I use 7.5rem to safely clear the fixed header. */
+        padding-top: 7.5rem;
+    }
 }
 
 .hero picture {
